@@ -96,11 +96,15 @@ function initMap() {
     mark(map);
 
 
-    
+
 
 
     var infowindow = new google.maps.InfoWindow();
-    var marker = new google.maps.Marker({ map: map });
+    var image = 'https://developers.google.com/maps/documentation/javascript/examples/full/images/beachflag.png';
+
+    var marker = new google.maps.Marker({ map: map,
+        icon: image
+    });
 
     marker.addListener('click', function () {
         infowindow.open(map, marker);
